@@ -5,13 +5,13 @@ import { useNavigate } from "react-router-dom";
 
 export function Sidebar() {
   const navigate = useNavigate();
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <S.Sidebar $isOpen={isOpen}>
       <S.Initials>RA</S.Initials>
-      <S.ButtonGroup $isOpen={isOpen}>
-        <S.Button onClick={() => navigate("/one")}>
+      <S.ButtonGroup>
+        <S.Button onClick={() => navigate("/")}>
           <S.Circle />
           <span>One</span>
         </S.Button>

@@ -16,6 +16,10 @@ export const Sidebar = styled.div<{ $isOpen: boolean }>`
   padding-top: 32px;
 
   transition: width 0.3s ease-in-out;
+
+  @media (max-width: 576px) {
+    width: ${({ $isOpen }) => ($isOpen ? "100px" : "246px")};
+  }
 `;
 
 export const Initials = styled.div`
@@ -37,7 +41,7 @@ export const Initials = styled.div`
   font-weight: 600;
 `;
 
-export const ButtonGroup = styled.div<{ $isOpen: boolean }>`
+export const ButtonGroup = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 10px;
